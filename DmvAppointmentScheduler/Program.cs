@@ -40,11 +40,27 @@ namespace DmvAppointmentScheduler
         {
             // Your code goes here .....
             // Re-write this method to be more efficient instead of a assigning all customers to the same teller
-            foreach(Customer customer in customers.Customer)
-            {
-                var appointment = new Appointment(customer, tellers.Teller[0]);
+
+            //order tellers by multiplier (asc) and customers by duration (desc)
+            List<Teller> tellerList = tellers.Teller.OrderBy(x => x.multiplier).ToList();
+            List<Customer> customerList = customers.Customer.OrderByDescending(x => x.duration).ToList();
+
+            //iterate over customers, if type matches assign customer to first teller from list of all matches
+            //if no type matches, just assign first teller.
+            foreach(Customer customer in customerList) {
+                var teller = tellerList.Where(x => x.specialtyType == customer.type).Count() !=0 ?
+                                tellerList.Where(x => x.specialtyType == customer.type).First() : tellerList.First();
+
+                var appointment = new Appointment(customer, teller);
                 appointmentList.Add(appointment);
+
+                // remove teller from list after assigned to customer, if all tellers used, reset list of tellers and startover with next customer
+                tellerList = tellerList.Where(x => x.id != teller.id).ToList();
+                if (tellerList.Count() == 0) {  
+                    tellerList = tellers.Teller.OrderBy(x => x.multiplier).ToList();
+                }
             }
+          
         }
         static void OutputTotalLengthToConsole()
         {

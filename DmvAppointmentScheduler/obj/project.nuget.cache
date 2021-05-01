@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "U8OZGlcunOCR+5OqdlU1WI3TIC5rU2tXR/bplUfMnRE5orBcY7/j1b4VuqJw0iICk+TnoEQ6gkyI5Up51D5WjA==",
+  "success": true,
+  "projectFilePath": "/Users/toonbosmans/development/my_projects/NOV_project/dmvcodechallenge/DmvAppointmentScheduler/DmvAppointmentScheduler.csproj",
+  "expectedPackageFiles": [
+    "/Users/toonbosmans/.nuget/packages/json.net/1.0.18/json.net.1.0.18.nupkg.sha512",
+    "/Users/toonbosmans/.nuget/packages/microsoft.netcore.app/2.1.0/microsoft.netcore.app.2.1.0.nupkg.sha512",
+    "/Users/toonbosmans/.nuget/packages/microsoft.netcore.dotnetapphost/2.1.0/microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
+    "/Users/toonbosmans/.nuget/packages/microsoft.netcore.dotnethostpolicy/2.1.0/microsoft.netcore.dotnethostpolicy.2.1.0.nupkg.sha512",
+    "/Users/toonbosmans/.nuget/packages/microsoft.netcore.dotnethostresolver/2.1.0/microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
+    "/Users/toonbosmans/.nuget/packages/microsoft.netcore.platforms/2.1.0/microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+    "/Users/toonbosmans/.nuget/packages/microsoft.netcore.targets/2.1.0/microsoft.netcore.targets.2.1.0.nupkg.sha512",
+    "/Users/toonbosmans/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/toonbosmans/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

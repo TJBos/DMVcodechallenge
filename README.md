@@ -1,41 +1,20 @@
 # DMV Code Challenge
 
-### **Overview**
-This is a small C# .net core application we developed and is an appointment scheduler for the Department of Motor Vehicles (DMV). The application reads in data for customers and assigns all customers to a single Teller. (which is ineffecient)
-Your mission, if you choose to accept, is to create a more effecient algothrim to give each customer an appointment with a teller.
+## Commit 1
 
-*Customer*
+Since I'm not too familiar with a .NET environment, I first made a solution in Node/JavaScript.
+This can be found in the JSfiles directory.
 
-*	5,000 Total
-- Available Data:
-	- Id
-	- Service Type
-	- Duration of Appointment
-	
-*Teller*
+The solution I used is pretty straight forward, however I can not _provably_ say this is the most optimal solution.
+It is an intuitive solution but in the entire combinatorial space there might be a more optimal theoretical solution.
 
--	150 Total
-- Available Data:
-	- Id
-	- Specialty Type
-	- Multiplier
+I was not sure if it was allowed to change the order of the Customers. Sorting based on duration has a slight optimization.
 
-**Details**
+This solution sorts the tellers based on their multipliers, then loops over every customer. For each customer, if a
+specialty type matches, the first teller of the list that matches (and so with the best multiplier) is assigned. If no match, the first
+overall teller is assigned.
 
--	When a customer's service type matches the specialty type of the assigned teller the multiplier with be multiplied against to customer's duration to reduce the appointment time.
-- 	Some customers' service type may not match any teller's specialty type.
-- 	Not all tellers will have the same multiplier even within the same specialty type.
-- 	Do **NOT** change Customer or Teller JSON Data or the how the output is calculated (Needs to output the teller with the longest duration and the total duration). However, refactor of the code is strongly encouraged.
+## Commit 2
 
-**Goal**
-
-We want to try to process all customers and have our tellers go home as early as possible. All the tellers will leave together once the last customer has been processed. Therefore, your results will **NOT** be measured according to the total number of time the tellers spend with customers but when the last customer is processed.
-
-**Submission**
-
-Create a git repository with your solution and resume.Then please email us a read access link to RigsentryCodeChallenge@gmail.com.
-
-Thank you and good luck!
-
-NOV Rigsentry Team
-
+I added the C# code and managed to build and run the program. I had to change some slashes in the paths to make it run on my Mac and
+hopefully restored them.
